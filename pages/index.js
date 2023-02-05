@@ -46,9 +46,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Replicate + Next.js</title>
+        <title>Stable Diffusion AI - Carson</title>
       </Head>
-
+      <h1>Stable Diffusion AI</h1>
+      <p>
+        Enter a prompt to generate an image. Using Open source diffussion model
+      </p>
       <form className={styles.form} onSubmit={handleSubmit}>
         <input type="text" name="prompt" placeholder="Enter a prompt to display an image" />
         <button type="submit">Go!</button>
