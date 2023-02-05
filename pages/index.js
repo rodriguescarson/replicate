@@ -38,7 +38,7 @@ export default function Home() {
         setError(prediction.detail);
         return;
       }
-      console.log({prediction})
+      console.log({ prediction })
       setPrediction(prediction);
     }
   };
@@ -48,44 +48,45 @@ export default function Home() {
       <Head>
         <title>Replicate + Next.js</title>
       </Head>
-      <h1>
-        Diffusion AI
-      </h1>
-      <p>
-        Designed by <a href="https://stability.ai">Stability AI</a>, Stable Diffusion is a GPT-3 model that generates images from text prompts. This demo uses the <a href="https://replicate.com">Replicate</a> API to run the model.
-      </p>
-      <br/>
-      <p style={{
-        fontSize: '1.5rem',
-        fontWeight: 'bold'
-        
-      }}>
-      Visit Carsons linkedin  <a href="https://www.linkedin.com/in/rodriguescarson/">@rodriguescarson</a>
-      </p>
-      <br/>
-      
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <input type="text" name="prompt" placeholder="Enter a prompt to display an image" />
-        <button type="submit">Go!</button>
-      </form>
+      <div className={styles.header}>
+        <h1>
+          Diffusion AI
+        </h1>
+        <p>
+          Designed by <a href="https://stability.ai">Stability AI</a>, Stable Diffusion is a GPT-3 model that generates images from text prompts. This demo uses the <a href="https://replicate.com">Replicate</a> API to run the model.
+        </p>
+        <br />
 
-      {error && <div>{error}</div>}
+      </div>
+      <div className={styles.body}>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <input type="text" name="prompt" placeholder="Enter a prompt to display an image" />
+          <button type="submit">Go!</button>
+        </form>
 
-      {prediction && (
-        <div>
+        {error && <div>{error}</div>}
+
+        {prediction && (
+          <div>
             {prediction.output && (
               <div className={styles.imageWrapper}>
-              <Image
-                fill
-                src={prediction.output[prediction.output.length - 1]}
-                alt="output"
-                sizes='100vw'
-              />
+                <Image
+                  fill
+                  src={prediction.output[prediction.output.length - 1]}
+                  alt="output"
+                  sizes='100vw'
+                />
               </div>
-            )}  
+            )}
             <p>status: {prediction.status}</p>
-        </div>
-      )}
+          </div>
+        )}
+      </div>
+      <div className={styles.footer}>
+
+        Visit Carsons linkedin  <a href="https://www.linkedin.com/in/rodriguescarson/">@rodriguescarson</a>
+
+      </div>
     </div>
   );
 }
