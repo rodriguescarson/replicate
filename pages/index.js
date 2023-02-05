@@ -49,11 +49,6 @@ export default function Home() {
         <title>Replicate + Next.js</title>
       </Head>
 
-      <p>
-        Dream something with{" "}
-        <a href="https://replicate.com/stability-ai/stable-diffusion">stability-ai/stable-diffusion</a>:
-      </p>
-
       <form className={styles.form} onSubmit={handleSubmit}>
         <input type="text" name="prompt" placeholder="Enter a prompt to display an image" />
         <button type="submit">Go!</button>
