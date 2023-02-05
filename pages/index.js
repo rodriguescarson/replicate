@@ -48,12 +48,22 @@ export default function Home() {
       <Head>
         <title>Replicate + Next.js</title>
       </Head>
-
+      <h1>
+        Diffusion AI
+      </h1>
       <p>
-        Dream something with{" "}
-        <a href="https://replicate.com/stability-ai/stable-diffusion">stability-ai/stable-diffusion</a>:
+        Designed by <a href="https://stability.ai">Stability AI</a>, Stable Diffusion is a GPT-3 model that generates images from text prompts. This demo uses the <a href="https://replicate.com">Replicate</a> API to run the model.
       </p>
-
+      <br/>
+      <p style={{
+        fontSize: '1.5rem',
+        fontWeight: 'bold'
+        
+      }}>
+      Visit Carsons linkedin  <a href="https://www.linkedin.com/in/rodriguescarson/">@rodriguescarson</a>
+      </p>
+      <br/>
+      
       <form className={styles.form} onSubmit={handleSubmit}>
         <input type="text" name="prompt" placeholder="Enter a prompt to display an image" />
         <button type="submit">Go!</button>
