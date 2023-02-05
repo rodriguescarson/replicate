@@ -46,12 +46,14 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Stable Diffusion AI - Carson</title>
+        <title>Replicate + Next.js</title>
       </Head>
-      <h1>Stable Diffusion AI</h1>
+
       <p>
-        Enter a prompt to generate an image. Using Open source diffussion model
+        Dream something with{" "}
+        <a href="https://replicate.com/stability-ai/stable-diffusion">stability-ai/stable-diffusion</a>:
       </p>
+
       <form className={styles.form} onSubmit={handleSubmit}>
         <input type="text" name="prompt" placeholder="Enter a prompt to display an image" />
         <button type="submit">Go!</button>
